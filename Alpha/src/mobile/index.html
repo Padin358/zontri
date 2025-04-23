@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../output.css">
+  <title>ZONTRI MOBILE</title>
+</head>
+<body>
+  <div class="text-3xl text-center mx-auto font-semibold mt-20" id="mobileLangOut">It's possible you might encounter bugs in the mobile version of Zontri, are you sure you want to continue?</div>
+  <div class="flex flex-row flex-wrap justify-center gap-20 mt-14 font-semibold">
+    <button class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-2xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30" id="yesBtn" onclick="yesFun()">Yes</button>
+  </div>
+  <script>
+    let lang = localStorage.getItem("curLang")
+    let output = document.getElementById("mobileLangOut")
+    let yesBtn = document.getElementById("yesBtn")
+    let noBtn = document.getElementById("noBtn")
+
+    if(lang == "en") {
+      output.innerText = "It's possible you might encounter bugs in the mobile version of Zontri, are you sure you want to continue?"
+      yesBtn.innerText = "Yes"
+      noBtn.innerText = "No"
+    } else if (lang == "cs") {
+      output.innerText = "Je možné, že narazíte na chyby v mobilní verzi Zontri, jste si jisti, že chcete pokračovat?"
+      yesBtn.innerText = "Ano"
+      noBtn.innerText = "Ne"
+    }
+
+    const yesFun = () => {
+      if(lang == "en") {
+        location.href = "../en/"
+      } else if(lang == "cs") {
+        location.href = "../cs/"
+      }
+    }
+  </script>
+</body>
+</html>
