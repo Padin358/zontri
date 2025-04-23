@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../output.css">
+  <!--! npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+  <title>ZONTRI</title>
+</head>
+<body class="bg-secBg font-normal">
+  <header class="bg-basicBg">
+    <div class="flex flex-row flex-wrap justify-center p-3 gap-4">
+      <select name="lang" id="langSelector" class="p-2 bg-blue-900 text-gray-100 font-semibold rounded-lg text-xl mr-[0px] sm:mr-[50px] md:mr-[100px] lg:mr-[200px] xl:mr-[400px] 2xl:mr-[600px] shadow-lg shadow-blue-500/30" onchange="changeLang(this.value, this.id)">
+        <option value="-">-</option>
+        <option value="en">English</option>
+        <option value="cs">Czech</option>
+      </select>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Templates</a>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">WebDev</a>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Other</a>
+    </div>
+  </header>
+  <main class="mt-20">
+    <div class="bg-basicBg text-gray-100 w-1/2 mx-auto rounded-2xl p-3" id="mainSections">
+      <section class="text-center " id="headingSec">
+        <h1 class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-pink-900 w-80 mx-auto" id="heading">Zontri</h1>
+        <h2 class="text-xl font-semibold mt-[-5px] text-gray-400" id="subHeading">A programmer's universal tool</h2>
+      </section>
+      <section class="" id="introSec">
+        <h3 class="text-left mx-3 mt-20 mb-5 text-2xl font-semibold" id="about">What is Zontri about?</h3>
+        <div class="grid grid-cols-3 text-center mt-10 gap-8">
+          <div class="">
+            <p class="text-2xl font-bold text-blue-600 underline underline-offset-4 my-3">Smart Tools</p>
+            <p class="text-lg font-semibold text-gray-400">Our tools can help you with your personal or work projects</p>
+          </div>
+          <div class="">
+            <p class="text-2xl font-bold text-blue-600 underline underline-offset-4 my-3">Templates</p>
+            <p class="text-lg font-semibold text-gray-400">Pre-made website or app templates which you can just change and get up and going</p>
+          </div>
+          <div class="">
+            <p class="text-2xl font-bold text-blue-600 underline underline-offset-4 my-3">Generators</p>
+            <p class="text-lg font-semibold text-gray-400">Zontri has a lot of useful generators, like the random color generator</p>
+          </div>
+        </div>
+      </section>
+      <section class="" id="supportSec">
+
+      </section>
+    </div>
+  </main>
+  <footer class="fixed left-0 bottom-0 text-center w-[100%] mt-10 py-2 bg-basicBg text-gray-100 font-semibold">
+    <p class="">Website created by DisoliX with 💙 and way too much coffee...</p>
+    <p class="">All rights reserved, 2025.</p>
+  </footer>
+  <script src="../js/index.js"></script>
+</body>
+</html>
