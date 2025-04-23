@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../output.css">
+  <!--! npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+  <title>ZONTRI</title>
+</head>
+<body class="bg-secBg font-normal">
+  <header class="bg-basicBg">
+    <div class="flex flex-row flex-wrap justify-center p-3 gap-4">
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Templates</a>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">WebDev</a>
+      <a href="../" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Home</a>
+    </div>
+  </header>
+  <main class="mt-10 mb-20">
+    <div class="text-gray-100 w-1/2 mx-auto rounded-2xl p-3" id="mainSections">
+      <section class="text-center " id="headingSec">
+        <h1 class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-pink-900 w-80 mx-auto" id="heading">Other</h1>
+        <h2 class="text-xl font-semibold mt-[-5px] text-gray-400" id="subHeading">Generators, Libraries, Palletes, and more!</h2>
+      </section>
+      <section class="mt-32" id="contentMain">
+        <div class="flex flex-row flex-wrap justify-evenly">
+          <a class="w-80 text-left mx-auto bg-basicBg p-4 rounded-xl" id="numGen" href="">
+            <img src="" alt="" class="mx-auto w-60">
+            <p class="text-xl font-bold text-blue-600">Random Number Generator</p>
+            <p class="text-gray-400 my-2">Desc: Generates random nubmers, what else would you want?</p>
+            <p class="text-gray-300 font-semibold">Author: DisoliX_</p>
+            <p class="text-gray-300 font-semibold">Published: XX.X.2025</p>
+            <p class="text-sm text-gray-400">Tags: Generator</p>
+          </a>
+          <a class="w-80 text-left mx-auto bg-basicBg p-4 rounded-xl" id="numCol" href="colorPalette.html">
+            <img src="" alt="" class="mx-auto w-60">
+            <p class="text-xl font-bold text-blue-600">Color Palette Generator</p>
+            <p class="text-gray-400 my-2">Desc: Generates 5 random colors, you might get good ones, or trash ones.</p>
+            <p class="text-gray-300 font-semibold">Author: DisoliX_</p>
+            <p class="text-gray-300 font-semibold">Published: XX.X.2025</p>
+            <p class="text-sm text-gray-400">Tags: Generator, Colors</p>
+          </a>
+        </div>
+      </section>
+  </main>
+  <footer class="fixed left-0 bottom-0 text-center w-[100%] mt-10 py-2 bg-basicBg text-gray-100 font-semibold">
+    <p class="">Website created by DisoliX with 💙 and way too much coffee...</p>
+    <p class="">All rights reserved, 2025.</p>
+  </footer>
+  <script src="../js/index.js"></script>
+</body>
+</html>

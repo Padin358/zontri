@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Palette</title>
+  <link rel="stylesheet" href="../../output.css">
+</head>
+<body class="bg-secBg font-normal">
+  <header class="bg-basicBg">
+    <div class="flex flex-row flex-wrap justify-center p-3 gap-4">
+      <a href="../other/" class="mr-32 bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">&#10094; Back to Other</a>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Templates</a>
+      <a href="" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">WebDev</a>
+      <a href="../" class="bg-blue-900 text-gray-100 p-2 rounded-md mx-3 text-xl hover:bg-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/30">Home</a>
+    </div>
+  </header>
+
+  <div class="flex flex-col items-center space-y-8">
+    <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-pink-900 w-80 mx-auto my-20" id="heading">Color Palette Generator</h1>
+    <p class="text-center text-lg text-gray-400">Click on a color to copy it!</p>
+
+    <div id="palette" class="flex space-x-4">
+      <button class="color-btn w-24 h-24 rounded-lg shadow-lg"></button>
+      <button class="color-btn w-24 h-24 rounded-lg shadow-lg"></button>
+      <button class="color-btn w-24 h-24 rounded-lg shadow-lg"></button>
+      <button class="color-btn w-24 h-24 rounded-lg shadow-lg"></button>
+      <button class="color-btn w-24 h-24 rounded-lg shadow-lg"></button>
+    </div>
+
+    <button id="generateBtn" class="mt-4 px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition">Generate New Palette</button>
+  </div>
+
+  <div id="copiedMessage" class="hidden fixed top-5 right-5 bg-blue-900 text-gray-100 py-2 px-4 rounded-lg shadow-lg animate-bounce"></div>
+
+  <script>
+    const palette = document.getElementById('palette');
+    const generateBtn = document.getElementById('generateBtn');
+    const copiedMessage = document.getElementById('copiedMessage');
+    let hexColors = [];
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function generatePalette() {
+      hexColors = [];
+      const buttons = document.querySelectorAll('.color-btn');
+      buttons.forEach(btn => {
+        const newColor = getRandomColor();
+        btn.style.backgroundColor = newColor;
+        hexColors.push(newColor);
+      });
+    }
+
+    function showCopiedMessage(color) {
+      copiedMessage.innerText = `${color} copied!`;
+      copiedMessage.classList.remove('hidden');
+      setTimeout(() => {
+        copiedMessage.classList.add('hidden');
+      }, 1500);
+    }
+
+    palette.addEventListener('click', (e) => {
+      if (e.target.classList.contains('color-btn')) {
+        const index = Array.from(palette.children).indexOf(e.target);
+        const color = hexColors[index];
+        navigator.clipboard.writeText(color);
+        showCopiedMessage(color);
+      }
+    });
+
+    generateBtn.addEventListener('click', generatePalette);
+
+    window.onload = generatePalette;
+  </script>
+
+</body>
+</html>
