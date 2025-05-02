@@ -9,7 +9,7 @@ export default {
           },
           fontFamily: {
             'normal': 'JetBrains Mono',
-            'special': 'Inter Space Grotesk',
+            'special': 'Space Grotesk',
           },
         },
       },
